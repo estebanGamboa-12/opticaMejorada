@@ -1,0 +1,82 @@
+[
+  {
+    "id": "graduada_classic_001",
+    "name": "Gafa Graduada Modelo Clásico",
+    "category": "graduadas",
+    "price": 99.99,
+    "image": "img/gafas1.jpg",
+    "description": "Montura ligera y resistente, ideal para uso diario y un toque de elegancia. Disponible en varios colores."
+  },
+  {
+    "id": "graduada_modern_002",
+    "name": "Gafa Graduada Diseño Moderno",
+    "category": "graduadas",
+    "price": 125.50,
+    "image": "img/gafas2.jpg",
+    "description": "Diseño vanguardista para quienes buscan destacar. Materiales de alta calidad y ajuste cómodo."
+  },
+  {
+    "id": "sol_aviator_001",
+    "name": "Gafa de Sol Aviador Clásica",
+    "category": "sol",
+    "price": 85.00,
+    "image": "img/gafas3.jpg",
+    "description": "Un icono que nunca pasa de moda. Lentes polarizadas con 100% protección UV."
+  },
+  {
+    "id": "sol_sport_002",
+    "name": "Gafa de Sol Deportiva Activa",
+    "category": "sol",
+    "price": 75.00,
+    "image": "img/gafas4.jpg",
+    "description": "Ideal para actividades al aire libre. Ligeras y con agarre antideslizante."
+  },
+  {
+    "id": "lentilla_diaria_001",
+    "name": "Lentillas Diarias (Pack 30)",
+    "category": "lentillas",
+    "price": 30.00,
+    "image": "img/gafas5.jpg",
+    "description": "Comodidad y frescura para cada día. Uso único, sin necesidad de mantenimiento."
+  },
+  {
+    "id": "lentilla_mensual_002",
+    "name": "Lentillas Mensuales (Pack 6)",
+    "category": "lentillas",
+    "price": 45.99,
+    "image": "img/gafas6.jpg",
+    "description": "Alta transpirabilidad para una visión nítida durante todo el mes."
+  },
+  {
+    "id": "accesorio_spray_001",
+    "name": "Spray Limpiador de Gafas",
+    "category": "accesorios",
+    "price": 8.50,
+    "image": "img/gafas7.jpg",
+    "description": "Limpieza profunda y sin rayas para tus lentes. Formato de 50ml."
+  },
+  {
+    "id": "accesorio_estuche_002",
+    "name": "Estuche Rígido para Gafas",
+    "category": "accesorios",
+    "price": 15.00,
+    "image": "img/gafas8.jpg",
+    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
+  },
+   {
+    "id": "accesorio_estuche_002",
+    "name": "Estuche Rígido para Gafas",
+    "category": "accesorios",
+    "price": 15.00,
+    "image": "img/gafas9.jpg",
+    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
+  },
+   {
+    "id": "gafas_goticas_001",
+    "name": "Estuche Rígido para Gafas",
+    "category": "accesorios",
+    "price": 15.00,
+    "image": "img/gafas9.jpg",
+    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
+  }
+]

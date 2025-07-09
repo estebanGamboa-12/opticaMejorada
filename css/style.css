@@ -1,0 +1,636 @@
+/* Variables CSS */
+:root {
+    --primary-color: #316d2e; /* Verde principal, ligeramente ajustado */
+    --primary-dark: #295a26; /* Verde para hovers y estados activos */
+    --secondary-color: #6c757d; /* Gris oscuro */
+    --accent-color: #ffc107; /* Amarillo para acentos */
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --white: #fff;
+    --border-radius: 8px; /* Un poco más redondeado */
+    --box-shadow-light: 0 4px 10px rgba(0,0,0,0.08); /* Sombra más suave */
+    --box-shadow-hover: 0 8px 20px rgba(0,0,0,0.15); /* Sombra para hover */
+    --transition-speed: 0.3s ease;
+}
+
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-bg);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: var(--box-shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsive */
+}
+
+.logo {
+    text-decoration: none;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-height: 55px; /* Ligeramente más grande */
+    width: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* Menú de Hamburguesa */
+.hamburger-menu {
+    display: none; /* Oculto por defecto en desktop */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Asegurar que esté por encima de la navegación */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    transition: all var(--transition-speed);
+}
+
+/* Animación de la hamburguesa a X */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Navegación Principal */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li {
+    margin-left: 30px; /* Espacio entre elementos en desktop */
+}
+
+.main-nav ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative; /* Para el efecto de subrayado en hover */
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Subrayado animado para la navegación */
+.main-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Posición del subrayado */
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
+}
+
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active::after {
+    width: 100%;
+}
+
+
+/* Buttons */
+.button, .button-small {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 28px; /* Ligeramente más padding */
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color var(--transition-speed), transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+}
+
+.button:hover, .button-small:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px); /* Efecto sutil al hover */
+    text-decoration: none;
+}
+
+.button-small {
+    padding: 8px 18px;
+    font-size: 0.88rem;
+}
+
+.favorite-button {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 10px 20px; /* Más padding */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s ease, box-shadow var(--transition-speed);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Más espacio para el icono */
+    font-size: 0.95rem;
+    text-transform: uppercase; /* MAYÚSCULAS */
+}
+
+.favorite-button:hover {
+    background-color: #e0a800; /* Un poco más oscuro */
+    transform: translateY(-3px); /* Mayor efecto */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Main content sections */
+main {
+    padding: 40px 0;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px; /* Más padding vertical */
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden; /* Para asegurar que cualquier efecto se contenga */
+}
+
+.hero::before { /* Un ligero gradiente para el fondo si quieres más profundidad */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2));
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.5rem; /* Más grande */
+    margin-bottom: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para el texto */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Más grande */
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.info-section {
+    padding: 50px 0; /* Más padding */
+    background-color: var(--white);
+    margin-bottom: 30px;
+    box-shadow: var(--box-shadow-light);
+    border-radius: var(--border-radius);
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 3rem; /* Más espacio */
+    font-size: 2.5rem; /* Más grande */
+    color: var(--primary-color); /* Color principal */
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; /* Más espacio */
+}
+
+.info-card {
+    background-color: var(--light-bg);
+    padding: 30px; /* Más padding */
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra más suave */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.info-card h3 {
+    color: var(--dark-bg); /* Cambiado a dark-bg para contraste */
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+/* Products Page */
+.products-page, .favorites-page {
+    padding-top: 30px;
+}
+
+.category-filter {
+    text-align: center;
+    margin-bottom: 40px; /* Más espacio */
+    padding: 15px; /* Más padding */
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* Más espacio */
+}
+
+.filter-button {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px; /* Más padding */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform 0.2s ease;
+    font-size: 1rem;
+    font-weight: 600; /* Un poco más de peso */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-button:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.filter-button.active {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px; /* Más espacio */
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    padding: 25px; /* Más padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.product-card:hover {
+    transform: translateY(-8px); /* Mayor efecto al pasar el ratón */
+    box-shadow: var(--box-shadow-hover);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 220px; /* Ligeramente más alto */
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px; /* Más espacio */
+}
+
+.product-card h3 {
+    font-size: 1.4rem; /* Ligeramente más grande */
+    margin-bottom: 0.8rem; /* Más espacio */
+    min-height: 3.2rem; /* Asegurar espacio para títulos de 2 líneas */
+    line-height: 1.2;
+}
+
+.product-card p {
+    font-size: 1rem; /* Un poco más grande */
+    color: #666;
+    flex-grow: 1;
+}
+
+.product-card .price {
+    font-size: 1.6rem; /* Más grande */
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 15px 0; /* Más espacio */
+}
+
+.product-card .favorite-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Favorites Page */
+.fav-intro {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* Contact Page */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.contact-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.contact-card h2 {
+    font-size: 1.8rem; /* Más grande */
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+}
+
+.contact-card p {
+    margin-bottom: 0.8rem;
+}
+
+.map-container {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-light);
+    overflow: hidden;
+}
+
+.map-container iframe {
+    border-radius: var(--border-radius);
+}
+
+.map-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-top: 20px;
+}
+
+/* General Messages */
+.pickup-message {
+    text-align: center;
+    font-weight: bold;
+    background-color: #e9ecef;
+    padding: 20px 25px; /* Más padding */
+    border-radius: var(--border-radius);
+    margin-top: 40px; /* Más margen */
+    border: 1px solid #dee2e6;
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+.error-message, .no-results {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #dc3545; /* Rojo para errores */
+    padding: 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+}
+
+.no-results a {
+    color: #007bff;
+    font-weight: bold;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 0; /* Más padding */
+    margin-top: 60px; /* Más margen */
+}
+
+footer p {
+    margin: 0.7rem 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+/* MEDIA QUERIES para tabletas y móviles */
+@media (max-width: 992px) {
+    /* Ajustes para tabletas */
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .info-section h2 {
+        font-size: 2.2rem;
+    }
+    .product-card h3 {
+        min-height: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: nowrap; /* Evita que el logo y el botón de hamburguesa se envuelvan */
+    }
+
+    .main-nav {
+        /* Estado inicial del menú en móviles: oculto y fuera de la pantalla */
+        position: fixed;
+        top: 0;
+        left: -100%; /* Oculto a la izquierda */
+        width: 70%; /* Ancho del menú desplegable */
+        height: 100%;
+        background-color: var(--white); /* Fondo del menú */
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        transition: left var(--transition-speed) ease-in-out;
+        z-index: 999; /* Por debajo de la hamburguesa, por encima del contenido */
+        overflow-y: auto; /* Para scroll si el contenido es largo */
+        padding-top: 80px; /* Espacio para el header si es fixed */
+    }
+
+    .main-nav.active {
+        left: 0; /* Mostrar el menú */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear ítems a la izquierda */
+        padding: 20px;
+    }
+
+    .main-nav ul li {
+        margin: 15px 0; /* Espacio vertical entre ítems */
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block; /* Ocupar todo el ancho del li */
+        font-size: 1.4rem; /* Más grande para fácil toque */
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; /* Separador */
+    }
+
+    .main-nav ul li:last-child a {
+        border-bottom: none; /* No hay separador en el último ítem */
+    }
+
+    .main-nav ul li a::after {
+        display: none; /* Ocultar el subrayado animado en móviles */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Mostrar la hamburguesa en móviles */
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .info-grid, .product-grid, .contact-info-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .category-filter {
+        flex-direction: column;
+    }
+
+    .filter-button {
+        width: 100%; /* Botones de filtro de ancho completo en móvil */
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+    .product-card img {
+        height: 180px;
+    }
+    .product-card h3 {
+        min-height: auto; /* Desactivar altura mínima en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        max-height: 45px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .filter-button {
+        padding: 10px 15px;
+        font-size: 0.88rem;
+    }
+    .favorite-button {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
