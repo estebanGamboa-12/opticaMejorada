@@ -216,31 +216,35 @@ header .container {
 main {
     padding: 40px 0;
 }
-
 .hero {
-    background-color: var(--primary-color);
+    /* Mantener lo que ya tenías */
+    background-color: var(--primary-color); /* Fallback por si la imagen no carga */
+    /* background-image: url('../img/exterior.png'); /* ¡Necesitas esta imagen!
+    background-size: cover;
+    background-position: center; */
+    position: relative;
     color: var(--white);
     text-align: center;
-    padding: 100px 20px; /* Más padding vertical */
+    padding: 100px 20px;
     margin-bottom: 30px;
-    position: relative;
-    overflow: hidden; /* Para asegurar que cualquier efecto se contenga */
+    overflow: hidden;
 }
 
-.hero::before { /* Un ligero gradiente para el fondo si quieres más profundidad */
+/* Este pseudoelemento creará el overlay semitransparente */
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2));
+    background-color: rgba(49, 109, 46, 0.65); /* Un 65% de opacidad de tu primary-color */
     z-index: 1;
 }
 
 .hero .container {
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima del pseudo-elemento */
+    z-index: 2; /* Asegura que el contenido esté por encima del overlay */
 }
 
 .hero h1 {

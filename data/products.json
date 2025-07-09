@@ -1,82 +1,356 @@
 [
-  {
-    "id": "graduada_classic_001",
-    "name": "Gafa Graduada Modelo Clásico",
-    "category": "graduadas",
-    "price": 99.99,
-    "image": "img/gafas1.jpg",
-    "description": "Montura ligera y resistente, ideal para uso diario y un toque de elegancia. Disponible en varios colores."
-  },
-  {
-    "id": "graduada_modern_002",
-    "name": "Gafa Graduada Diseño Moderno",
-    "category": "graduadas",
-    "price": 125.50,
-    "image": "img/gafas2.jpg",
-    "description": "Diseño vanguardista para quienes buscan destacar. Materiales de alta calidad y ajuste cómodo."
-  },
-  {
-    "id": "sol_aviator_001",
-    "name": "Gafa de Sol Aviador Clásica",
-    "category": "sol",
-    "price": 85.00,
-    "image": "img/gafas3.jpg",
-    "description": "Un icono que nunca pasa de moda. Lentes polarizadas con 100% protección UV."
-  },
-  {
-    "id": "sol_sport_002",
-    "name": "Gafa de Sol Deportiva Activa",
-    "category": "sol",
-    "price": 75.00,
-    "image": "img/gafas4.jpg",
-    "description": "Ideal para actividades al aire libre. Ligeras y con agarre antideslizante."
-  },
-  {
-    "id": "lentilla_diaria_001",
-    "name": "Lentillas Diarias (Pack 30)",
-    "category": "lentillas",
-    "price": 30.00,
-    "image": "img/gafas5.jpg",
-    "description": "Comodidad y frescura para cada día. Uso único, sin necesidad de mantenimiento."
-  },
-  {
-    "id": "lentilla_mensual_002",
-    "name": "Lentillas Mensuales (Pack 6)",
-    "category": "lentillas",
-    "price": 45.99,
-    "image": "img/gafas6.jpg",
-    "description": "Alta transpirabilidad para una visión nítida durante todo el mes."
-  },
-  {
-    "id": "accesorio_spray_001",
-    "name": "Spray Limpiador de Gafas",
-    "category": "accesorios",
-    "price": 8.50,
-    "image": "img/gafas7.jpg",
-    "description": "Limpieza profunda y sin rayas para tus lentes. Formato de 50ml."
-  },
-  {
-    "id": "accesorio_estuche_002",
-    "name": "Estuche Rígido para Gafas",
-    "category": "accesorios",
-    "price": 15.00,
-    "image": "img/gafas8.jpg",
-    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
-  },
-   {
-    "id": "accesorio_estuche_002",
-    "name": "Estuche Rígido para Gafas",
-    "category": "accesorios",
-    "price": 15.00,
-    "image": "img/gafas9.jpg",
-    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
-  },
-   {
-    "id": "gafas_goticas_001",
-    "name": "Estuche Rígido para Gafas",
-    "category": "accesorios",
-    "price": 15.00,
-    "image": "img/gafas9.jpg",
-    "description": "Protege tus gafas con este elegante y resistente estuche. Varios colores disponibles."
-  }
+    {
+        "id": 1,
+        "name": "Gafas de Sol Elegance Clásica",
+        "category": "sol",
+        "price": 120.00,
+        "shortDescription": "Unas gafas de sol atemporales que combinan estilo y protección.",
+        "description": "Las Gafas de Sol Elegance Clásica son el accesorio perfecto para cualquier ocasión. Su diseño atemporal y sofisticado las convierte en un básico imprescindible. Fabricadas con materiales de alta calidad, ofrecen una protección UV400 superior, asegurando el cuidado de tus ojos mientras disfrutas del sol. Ligeras y cómodas, son ideales para uso diario.",
+        "brand": "OptiStyle",
+        "material": "Acetato de alta resistencia",
+        "colorOptions": ["Negro", "Tortuga", "Marrón degradado"],
+        "size": "Estándar",
+        "gender": "Unisex",
+        "features": [
+            "Protección UV400 completa",
+            "Cristales polarizados",
+            "Diseño ergonómico para mayor comodidad",
+            "Estuche protector incluido"
+        ],
+        "mainImage": "https://picsum.photos/id/20/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/21/600/400",
+            "https://picsum.photos/id/22/600/400",
+            "https://picsum.photos/id/23/600/400"
+        ],
+        "relatedProducts": [2, 7, 10]
+    },
+    {
+        "id": 2,
+        "name": "Gafas Graduadas Minimalista",
+        "category": "graduadas",
+        "price": 95.00,
+        "shortDescription": "Montura ligera y discreta para un look moderno y profesional.",
+        "description": "Las Gafas Graduadas Minimalista están diseñadas para aquellos que buscan un estilo sutil pero impactante. Su montura ultraligera de titanio ofrece durabilidad y una comodidad inigualable para todo el día. Perfectas para un entorno profesional o para el uso diario, se adaptan a cualquier tipo de graduación y estilo personal.",
+        "brand": "VisionEdge",
+        "material": "Titanio",
+        "colorOptions": ["Plata", "Negro Mate", "Azul Eléctrico"],
+        "size": "Mediana",
+        "gender": "Unisex",
+        "features": [
+            "Montura ultraligera",
+            "Durabilidad excepcional",
+            "Diseño sin tornillos",
+            "Compatible con todo tipo de lentes"
+        ],
+        "mainImage": "https://picsum.photos/id/24/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/25/600/400",
+            "https://picsum.photos/id/26/600/400",
+            "https://picsum.photos/id/27/600/400"
+        ],
+        "relatedProducts": [5, 8]
+    },
+    {
+        "id": 3,
+        "name": "Lentillas Diarias AquaFresh",
+        "category": "lentillas",
+        "price": 30.00,
+        "shortDescription": "La máxima comodidad y frescura para tus ojos cada día.",
+        "description": "Las Lentillas Diarias AquaFresh te proporcionan una experiencia de uso superior con su tecnología de hidratación avanzada. Ideales para ojos sensibles o para quienes buscan la conveniencia de una lente nueva cada día sin necesidad de mantenimiento. Disfruta de una visión nítida y una comodidad duradera desde la mañana hasta la noche.",
+        "brand": "ClearView",
+        "material": "Hidrogel de Silicona",
+        "baseCurve": "8.5 mm",
+        "diameter": "14.2 mm",
+        "packaging": "30 lentillas por caja",
+        "features": [
+            "Uso diario desechable",
+            "Alta transpirabilidad",
+            "Tecnología de hidratación HydraGuard",
+            "Protección UV (clase 2)"
+        ],
+        "mainImage": "https://picsum.photos/id/28/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/29/600/400",
+            "https://picsum.photos/id/30/600/400",
+            "https://picsum.photos/id/31/600/400"
+        ],
+        "relatedProducts": [6, 9]
+    },
+    {
+        "id": 4,
+        "name": "Gafas de Sol Deportivas Pro-Fit",
+        "category": "sol",
+        "price": 85.00,
+        "shortDescription": "Diseñadas para la acción, con un ajuste seguro y cristales resistentes.",
+        "description": "Las Gafas de Sol Deportivas Pro-Fit son el compañero ideal para tus aventuras al aire libre. Su montura envolvente y ligera asegura un ajuste perfecto durante cualquier actividad física. Los cristales de policarbonato son resistentes a impactos y ofrecen una visión clara y sin distorsiones, incluso en condiciones de luz intensa.",
+        "brand": "ActiveOptic",
+        "material": "Policarbonato TR90",
+        "colorOptions": ["Negro", "Gris", "Azul Espejo"],
+        "size": "Grande",
+        "gender": "Unisex",
+        "features": [
+            "Lentes de policarbonato resistentes a impactos",
+            "Montura flexible y duradera",
+            "Ajuste antideslizante",
+            "Ideal para deportes y actividades al aire libre"
+        ],
+        "mainImage": "https://picsum.photos/id/32/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/33/600/400",
+            "https://picsum.photos/id/34/600/400",
+            "https://picsum.photos/id/35/600/400"
+        ],
+        "relatedProducts": [1, 7]
+    },
+    {
+        "id": 5,
+        "name": "Gafas Graduadas Retro Chic",
+        "category": "graduadas",
+        "price": 110.00,
+        "shortDescription": "Un toque vintage para tu estilo, con la calidad óptica más avanzada.",
+        "description": "Recupera la elegancia de antaño con las Gafas Graduadas Retro Chic. Su diseño icónico de ojo de gato y los detalles cuidadosamente elaborados te harán destacar. Aunque su estilo es clásico, están construidas con la tecnología moderna para asegurar durabilidad y un confort óptimo. Perfectas para un look distintivo y con personalidad.",
+        "brand": "VintageVision",
+        "material": "Acetato de celulosa",
+        "colorOptions": ["Tortuga", "Rojo Vino", "Negro Brillo"],
+        "size": "Mediana",
+        "gender": "Femenino",
+        "features": [
+            "Diseño ojo de gato clásico",
+            "Acabado pulido a mano",
+            "Bisagras de alta durabilidad",
+            "Compatibles con lentes progresivas"
+        ],
+        "mainImage": "https://picsum.photos/id/36/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/37/600/400",
+            "https://picsum.photos/id/38/600/400",
+            "https://picsum.photos/id/39/600/400"
+        ],
+        "relatedProducts": [2, 8]
+    },
+    {
+        "id": 6,
+        "name": "Lentillas Mensuales AirGuard",
+        "category": "lentillas",
+        "price": 45.00,
+        "shortDescription": "Transpirabilidad superior para una salud ocular óptima y uso prolongado.",
+        "description": "Las Lentillas Mensuales AirGuard están formuladas para ofrecer una transpirabilidad excepcional, permitiendo que tus ojos respiren durante todo el mes. Su material avanzado minimiza la sequedad y la irritación, proporcionando un confort duradero. Ideales para usuarios de lentillas habituales que buscan una solución fiable y saludable.",
+        "brand": "OptiComfort",
+        "material": "Aerogel de Silicona",
+        "baseCurve": "8.6 mm",
+        "diameter": "14.0 mm",
+        "packaging": "6 lentillas por caja",
+        "features": [
+            "Uso mensual",
+            "Alta permeabilidad al oxígeno",
+            "Resistencia a depósitos",
+            "Filtro UV integrado"
+        ],
+        "mainImage": "https://picsum.photos/id/40/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/41/600/400",
+            "https://picsum.photos/id/42/600/400",
+            "https://picsum.photos/id/43/600/400"
+        ],
+        "relatedProducts": [3, 9]
+    },
+    {
+        "id": 7,
+        "name": "Gafas de Sol Kids Fun",
+        "category": "sol",
+        "price": 35.00,
+        "shortDescription": "Protección y diversión para los más pequeños, con diseños coloridos.",
+        "description": "Las Gafas de Sol Kids Fun están pensadas para proteger los ojos sensibles de los niños con estilo. Su montura flexible y duradera es perfecta para resistir el juego. Los cristales ofrecen protección UV al 100%, asegurando que los pequeños disfruten del sol de forma segura y divertida.",
+        "brand": "SunnyKids",
+        "material": "Silicona suave y resistente",
+        "colorOptions": ["Azul", "Rosa", "Amarillo"],
+        "size": "Infantil",
+        "gender": "Unisex",
+        "features": [
+            "Montura irrompible y flexible",
+            "Lentes con protección UV400",
+            "Diseños divertidos y coloridos",
+            "Ligera y cómoda"
+        ],
+        "mainImage": "https://picsum.photos/id/44/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/45/600/400",
+            "https://picsum.photos/id/46/600/400",
+            "https://picsum.photos/id/47/600/400"
+        ],
+        "relatedProducts": [1, 4]
+    },
+    {
+        "id": 8,
+        "name": "Gafas Graduadas Junior",
+        "category": "graduadas",
+        "price": 70.00,
+        "shortDescription": "Diseño robusto y cómodo para las necesidades visuales de los niños.",
+        "description": "Las Gafas Graduadas Junior están diseñadas pensando en la actividad diaria de los niños. Su montura resistente y ligera garantiza que las gafas permanezcan en su lugar y soporten el ajetreo. Con una variedad de colores, los niños querrán usarlas y mantener una visión clara en todo momento.",
+        "brand": "KidsOptics",
+        "material": "Grilamid TR 90",
+        "colorOptions": ["Rojo", "Azul", "Verde", "Morado"],
+        "size": "Infantil",
+        "gender": "Unisex",
+        "features": [
+            "Montura duradera y flexible",
+            "Ajuste cómodo para niños",
+            "Hipoalergénicas",
+            "Variedad de colores vibrantes"
+        ],
+        "mainImage": "https://picsum.photos/id/48/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/49/600/400",
+            "https://picsum.photos/id/50/600/400",
+            "https://picsum.photos/id/51/600/400"
+        ],
+        "relatedProducts": [2, 5]
+    },
+    {
+        "id": 9,
+        "name": "Lentillas de Color Mystic",
+        "category": "lentillas",
+        "price": 50.00,
+        "shortDescription": "Cambia tu look con colores vibrantes y naturales, con confort garantizado.",
+        "description": "Experimenta una transformación sutil o dramática con las Lentillas de Color Mystic. Disponibles en una gama de colores naturales y vibrantes, estas lentillas te permiten realzar o cambiar el color de tus ojos. Fabricadas con un material suave y con alto contenido de agua, aseguran un confort excepcional durante todo el día.",
+        "brand": "ColorLens",
+        "material": "Hidrogel",
+        "colorOptions": ["Azul", "Verde", "Gris", "Marrón", "Avellana"],
+        "baseCurve": "8.6 mm",
+        "diameter": "14.0 mm",
+        "packaging": "2 lentillas por caja",
+        "features": [
+            "Disponibles con y sin graduación",
+            "Efecto de color natural",
+            "Alta hidratación para mayor confort",
+            "Fácil manipulación"
+        ],
+        "mainImage": "https://picsum.photos/id/52/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/53/600/400",
+            "https://picsum.photos/id/54/600/400",
+            "https://picsum.photos/id/55/600/400"
+        ],
+        "relatedProducts": [3, 6]
+    },
+    {
+        "id": 10,
+        "name": "Gafas de Sol Urban Explorer",
+        "category": "sol",
+        "price": 130.00,
+        "shortDescription": "Estilo urbano y protección avanzada para el día a día en la ciudad.",
+        "description": "Las Gafas de Sol Urban Explorer son la fusión perfecta de moda y funcionalidad. Su diseño contemporáneo y sus lentes de alta calidad te brindan la mejor protección contra los rayos UV, al mismo tiempo que te aseguran un look moderno y vanguardista. Ideales para la vida en la ciudad, combinan con cualquier atuendo.",
+        "brand": "CityOptics",
+        "material": "Metal y acetato",
+        "colorOptions": ["Dorado/Cristal Negro", "Plateado/Cristal Azul", "Bronce/Cristal Marrón"],
+        "size": "Mediana",
+        "gender": "Unisex",
+        "features": [
+            "Lentes antirreflejo",
+            "Protección UV400 premium",
+            "Montura ligera y resistente",
+            "Almohadillas de nariz ajustables"
+        ],
+        "mainImage": "https://picsum.photos/id/56/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/57/600/400",
+            "https://picsum.photos/id/58/600/400",
+            "https://picsum.photos/id/59/600/400"
+        ],
+        "relatedProducts": [1, 4, 7]
+    },
+    {
+        "id": 11,
+        "name": "Gafas Graduadas Gamer Pro",
+        "category": "graduadas",
+        "price": 150.00,
+        "shortDescription": "Diseñadas para reducir la fatiga visual durante largas sesiones de juego.",
+        "description": "Las Gafas Graduadas Gamer Pro son la herramienta definitiva para proteger tus ojos mientras disfrutas de tus videojuegos favoritos. Sus lentes con filtro de luz azul avanzado minimizan la tensión ocular y mejoran el contraste. La montura ligera y ergonómica asegura la máxima comodidad, incluso durante maratones de juego. ¡Lleva tu experiencia gamer al siguiente nivel!",
+        "brand": "GameSight",
+        "material": "Nylon TR90",
+        "colorOptions": ["Negro", "Azul Eléctrico", "Rojo Vibrante"],
+        "size": "Grande",
+        "gender": "Unisex",
+        "features": [
+            "Filtro de luz azul integrado",
+            "Lentes antirreflejo",
+            "Montura flexible y ligera",
+            "Compatible con graduaciones altas"
+        ],
+        "mainImage": "https://picsum.photos/id/60/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/61/600/400",
+            "https://picsum.photos/id/62/600/400",
+            "https://picsum.photos/id/63/600/400"
+        ],
+        "relatedProducts": [2, 5, 8]
+    },
+    {
+        "id": 12,
+        "name": "Líquido de Lentillas Multiuso",
+        "category": "accesorios",
+        "price": 15.00,
+        "shortDescription": "Solución de limpieza y mantenimiento para todo tipo de lentillas blandas.",
+        "description": "Nuestro Líquido de Lentillas Multiuso es una solución completa para la limpieza, desinfección, enjuague y conservación de todas las lentes de contacto blandas. Su fórmula avanzada elimina eficazmente proteínas y depósitos, manteniendo tus lentillas frescas y cómodas. Ideal para el cuidado diario.",
+        "brand": "OptiCare",
+        "material": "Solución estéril isotónica",
+        "volume": "360 ml",
+        "features": [
+            "Limpia, desinfecta, enjuaga y conserva",
+            "Apto para ojos sensibles",
+            "Incluye estuche para lentillas",
+            "Fórmula de hidratación prolongada"
+        ],
+        "mainImage": "https://picsum.photos/id/64/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/65/600/400",
+            "https://picsum.photos/id/66/600/400"
+        ],
+        "relatedProducts": [3, 6, 9]
+    },
+    {
+        "id": 13,
+        "name": "Spray Limpiador de Gafas",
+        "category": "accesorios",
+        "price": 8.00,
+        "shortDescription": "Limpieza rápida y eficaz para tus lentes sin dejar residuos.",
+        "description": "El Spray Limpiador de Gafas es la solución perfecta para mantener tus lentes impecables. Elimina huellas, polvo y suciedad sin esfuerzo, dejando una visión clara y sin rayas. Su fórmula es segura para todo tipo de lentes, incluyendo las que tienen tratamientos antirreflejos o protectores UV. ¡Imprescindible para el cuidado diario de tus gafas!",
+        "brand": "CleanLens",
+        "material": "Líquido limpiador sin alcohol",
+        "volume": "100 ml",
+        "features": [
+            "Fórmula sin alcohol",
+            "Secado rápido sin marcas",
+            "Apto para todas las lentes",
+            "Formato spray conveniente"
+        ],
+        "mainImage": "https://picsum.photos/id/67/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/68/600/400"
+        ],
+        "relatedProducts": [1, 2, 4, 5]
+    },
+    {
+        "id": 14,
+        "name": "Estuche Rígido Elegante",
+        "category": "accesorios",
+        "price": 12.00,
+        "shortDescription": "Protección superior y estilo para tus gafas.",
+        "description": "Protege tus gafas con nuestro Estuche Rígido Elegante. Fabricado con materiales duraderos y un interior suave que previene arañazos, este estuche es ideal para guardar tus gafas de sol o graduadas de forma segura. Su diseño compacto y sofisticado lo convierte en el complemento perfecto para tu día a día o para tus viajes.",
+        "brand": "OptiCase",
+        "material": "Exterior de cuero sintético, interior de terciopelo",
+        "colorOptions": ["Negro", "Marrón", "Gris"],
+        "features": [
+            "Protección contra golpes y arañazos",
+            "Cierre magnético seguro",
+            "Diseño compacto y elegante",
+            "Compatible con la mayoría de gafas"
+        ],
+        "mainImage": "https://picsum.photos/id/69/600/400",
+        "galleryImages": [
+            "https://picsum.photos/id/70/600/400"
+        ],
+        "relatedProducts": [1, 2, 4, 5, 7, 8, 10, 11]
+    }
 ]
