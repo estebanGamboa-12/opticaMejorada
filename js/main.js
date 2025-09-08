@@ -76,6 +76,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const mainNav = document.querySelector('.main-nav');
     const body = document.body; // Para evitar scroll al abrir el menú
+    const themeToggle = document.getElementById('theme-toggle');
+
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark' || !storedTheme) {
+        body.classList.add('dark-mode');
+    }
+
+    const updateThemeIcon = () => {
+        if (!themeToggle) return;
+        themeToggle.innerHTML = body.classList.contains('dark-mode')
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
+    };
+    updateThemeIcon();
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon();
+        });
+    }
 
     if (hamburgerMenu && mainNav) {
         hamburgerMenu.addEventListener('click', () => {

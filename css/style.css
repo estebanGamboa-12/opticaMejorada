@@ -12,6 +12,27 @@
     --box-shadow-light: 0 4px 10px rgba(0,0,0,0.08); /* Sombra más suave */
     --box-shadow-hover: 0 8px 20px rgba(0,0,0,0.15); /* Sombra para hover */
     --transition-speed: 0.3s ease;
+    --primary-gradient: linear-gradient(135deg, #316d2e 0%, #56ab2f 100%);
+    --primary-gradient-hover: linear-gradient(135deg, #295a26 0%, #3d6d2e 100%);
+    --bg-gradient: linear-gradient(180deg, var(--light-bg) 0%, #e9ecef 100%);
+    --header-bg: rgba(255,255,255,0.9);
+}
+
+body.dark-mode {
+    --primary-color: #8e2de2;
+    --primary-dark: #4a00e0;
+    --secondary-color: #a0a0a0;
+    --accent-color: #00d9ff;
+    --text-color: #f8f9fa;
+    --light-bg: #1a1a1a;
+    --dark-bg: #000;
+    --white: #1f1f1f;
+    --box-shadow-light: 0 4px 10px rgba(0,0,0,0.6);
+    --box-shadow-hover: 0 8px 20px rgba(0,0,0,0.8);
+    --primary-gradient: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    --primary-gradient-hover: linear-gradient(135deg, #4a00e0 0%, #2b0866 100%);
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --header-bg: rgba(0,0,0,0.6);
 }
 
 /* Base styles */
@@ -21,11 +42,15 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--light-bg);
+    background: var(--bg-gradient);
 }
 
 .container {
@@ -35,7 +60,7 @@ body {
 }
 
 h1, h2, h3 {
-    color: var(--dark-bg);
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 
@@ -56,9 +81,10 @@ a:hover {
 
 /* Header */
 header {
-    background-color: var(--white);
+    background-color: var(--header-bg);
+    backdrop-filter: blur(8px);
     padding: 1rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     box-shadow: var(--box-shadow-light);
     position: sticky;
     top: 0;
@@ -70,6 +96,8 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Para responsive */
+    position: relative;
+    padding-right: 60px; /* espacio para el botón de tema */
 }
 
 .logo {
@@ -107,6 +135,26 @@ header .container {
     background-color: var(--text-color);
     border-radius: 10px;
     transition: all var(--transition-speed);
+}
+
+/* Botón de cambio de tema */
+.theme-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color var(--transition-speed), transform 0.2s ease;
+    z-index: 1002;
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 /* Animación de la hamburguesa a X */
@@ -165,13 +213,13 @@ header .container {
 /* Buttons */
 .button, .button-small {
     display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white);
+    background: var(--primary-gradient);
+    color: #fff;
     padding: 12px 28px; /* Ligeramente más padding */
     border-radius: var(--border-radius);
     text-decoration: none;
     font-weight: bold;
-    transition: background-color var(--transition-speed), transform 0.2s ease;
+    transition: background var(--transition-speed), transform 0.2s ease;
     border: none;
     cursor: pointer;
     font-size: 1rem;
@@ -179,7 +227,7 @@ header .container {
 }
 
 .button:hover, .button-small:hover {
-    background-color: var(--primary-dark);
+    background: var(--primary-gradient-hover);
     transform: translateY(-2px); /* Efecto sutil al hover */
     text-decoration: none;
 }
@@ -223,7 +271,7 @@ main {
     background-size: cover;
     background-position: center; */
     position: relative;
-    color: var(--white);
+    color: #fff;
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 30px;
@@ -238,7 +286,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(49, 109, 46, 0.65); /* Un 65% de opacidad de tu primary-color */
+    background-color: rgba(78, 0, 194, 0.65); /* Un 65% de opacidad del color principal */
     z-index: 1;
 }
 
@@ -248,7 +296,7 @@ main {
 }
 
 .hero h1 {
-    color: var(--white);
+    color: #fff;
     font-size: 3.5rem; /* Más grande */
     margin-bottom: 1.2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra para el texto */
@@ -285,12 +333,14 @@ main {
 }
 
 .info-card {
-    background-color: var(--light-bg);
+    background-color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
     padding: 30px; /* Más padding */
     border-radius: var(--border-radius);
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra más suave */
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    backdrop-filter: blur(4px);
 }
 
 .info-card:hover {
@@ -299,7 +349,7 @@ main {
 }
 
 .info-card h3 {
-    color: var(--dark-bg); /* Cambiado a dark-bg para contraste */
+    color: var(--text-color);
     margin-bottom: 1rem;
     font-size: 1.6rem;
 }
@@ -324,7 +374,7 @@ main {
 
 .filter-button {
     background-color: var(--secondary-color);
-    color: var(--white);
+    color: #fff;
     border: none;
     padding: 12px 25px; /* Más padding */
     border-radius: var(--border-radius);
@@ -355,7 +405,8 @@ main {
 }
 
 .product-card {
-    background-color: var(--white);
+    background-color: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,255,255,0.1);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-light);
     padding: 25px; /* Más padding */
@@ -364,6 +415,7 @@ main {
     flex-direction: column;
     align-items: center;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    backdrop-filter: blur(4px);
 }
 
 .product-card:hover {
@@ -427,6 +479,7 @@ main {
     box-shadow: var(--box-shadow-light);
     text-align: center;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .contact-card:hover {
@@ -496,7 +549,7 @@ main {
 /* Footer */
 footer {
     background-color: var(--dark-bg);
-    color: var(--white);
+    color: var(--text-color);
     text-align: center;
     padding: 30px 0; /* Más padding */
     margin-top: 60px; /* Más margen */
@@ -528,6 +581,7 @@ footer p {
 @media (max-width: 768px) {
     header .container {
         flex-wrap: nowrap; /* Evita que el logo y el botón de hamburguesa se envuelvan */
+        padding-right: 60px; /* mantener espacio para el botón de tema */
     }
 
     .main-nav {
