@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carga los productos desde el archivo JSON
     async function loadProducts() {
         try {
-            const response = await fetch('http://localhost/opticaMejorada/data/products.json');
+            const response = await fetch('https://deploy-preview-6--opticaalberche.netlify.app/productos');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn('Fetch falló, intentando import dinámico...', error);
             try {
 
-                const module = await import('http://localhost/opticaMejorada/data/products.json', { assert: { type: 'json' } });
+                const module = await import('https://deploy-preview-6--opticaalberche.netlify.app/productos', { assert: { type: 'json' } });
 
 
                 allProductsData = module.default;

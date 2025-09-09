@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Cargar todos los productos una vez para poder encontrar los detalles de los favoritos
     try {
-        const response = await fetch('http://localhost/opticaMejorada/data/products.json');
+        const response = await fetch('https://deploy-preview-6--opticaalberche.netlify.app/productos');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
