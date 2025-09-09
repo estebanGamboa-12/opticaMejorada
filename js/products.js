@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const isFavorite = checkFavoriteStatus(product.id); // Función de main.js
 
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.mainImage}" alt="${product.name}">
                 <h3>${product.name}</h3>
-                <p>${product.description}</p>
+                <p>${product.shortDescription}</p>
                 <p class="price">${product.price.toFixed(2)} €</p>
                 <button class="favorite-button" data-id="${product.id}">
-${isFavorite ? '<i class="fas fa-star"></i> Quitar de favoritos' : '<i class="far fa-star"></i> Añadir a favoritos'}   
-             </button>
+                    ${isFavorite ? '<i class="fas fa-star"></i> Quitar de favoritos' : '<i class="far fa-star"></i> Añadir a favoritos'}
+                </button>
             `;
             productListContainer.appendChild(productCard);
         });
@@ -53,14 +53,13 @@ ${isFavorite ? '<i class="fas fa-star"></i> Quitar de favoritos' : '<i class="fa
         // Asigna eventos a los botones de favoritos
         document.querySelectorAll('.favorite-button').forEach(button => {
             button.addEventListener('click', (event) => {
-                const itemId = event.target.dataset.id;
+                const btn = event.currentTarget;
+                const itemId = btn.dataset.id;
                 toggleFavorite(itemId); // Función de main.js
                 // Actualiza el texto del botón al instante
-                if (checkFavoriteStatus(itemId)) {
-                    event.target.innerHTML = '<i class="fas fa-star"></i> Quitar de favoritos';
-                } else {
-                    event.target.innerHTML = '<i class="far fa-star"></i> Añadir a favoritos';
-                }
+                btn.innerHTML = checkFavoriteStatus(itemId)
+                    ? '<i class="fas fa-star"></i> Quitar de favoritos'
+                    : '<i class="far fa-star"></i> Añadir a favoritos';
             });
         });
     }
@@ -71,9 +70,10 @@ ${isFavorite ? '<i class="fas fa-star"></i> Quitar de favoritos' : '<i class="fa
             // Remueve la clase 'active' de todos los botones
             filterButtons.forEach(btn => btn.classList.remove('active'));
             // Añade la clase 'active' al botón clickeado
-            event.target.classList.add('active');
+            const btn = event.currentTarget;
+            btn.classList.add('active');
 
-            const category = event.target.dataset.category;
+            const category = btn.dataset.category;
             let filteredProducts = [];
 
             if (category === 'all') {
