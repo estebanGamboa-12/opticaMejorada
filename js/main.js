@@ -121,7 +121,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Añadir una regla CSS para `no-scroll` en style.css (ya está incluida en la última versión de style.css arriba)
-/* body.no-scroll {
-    overflow: hidden;
-} */

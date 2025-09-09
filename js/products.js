@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const module = await import('http://localhost/opticaMejorada/data/products.json', { assert: { type: 'json' } });
 
+
                 allProductsData = module.default;
             } catch (importError) {
                 console.error('Error al cargar los productos:', importError);
