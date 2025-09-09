@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carga los productos desde el archivo JSON
     async function loadProducts() {
         try {
-            const response = await fetch('data/products.json');
+            const response = await fetch('http://localhost/opticaMejorada/data/products.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.warn('Fetch falló, intentando import dinámico...', error);
             try {
-                const module = await import('../data/products.json', { assert: { type: 'json' } });
+
+                const module = await import('http://localhost/opticaMejorada/data/products.json', { assert: { type: 'json' } });
+
+
                 allProductsData = module.default;
             } catch (importError) {
                 console.error('Error al cargar los productos:', importError);

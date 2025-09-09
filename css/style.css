@@ -18,6 +18,23 @@
     --header-bg: rgba(255,255,255,0.9);
 }
 
+body.dark-mode {
+    --primary-color: #8e2de2;
+    --primary-dark: #4a00e0;
+    --secondary-color: #a0a0a0;
+    --accent-color: #00d9ff;
+    --text-color: #f8f9fa;
+    --light-bg: #1a1a1a;
+    --dark-bg: #000;
+    --white: #1f1f1f;
+    --box-shadow-light: 0 4px 10px rgba(0,0,0,0.6);
+    --box-shadow-hover: 0 8px 20px rgba(0,0,0,0.8);
+    --primary-gradient: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    --primary-gradient-hover: linear-gradient(135deg, #4a00e0 0%, #2b0866 100%);
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --header-bg: rgba(0,0,0,0.6);
+}
+
 /* Base styles */
 * {
     box-sizing: border-box;
@@ -38,6 +55,7 @@ body {
 
 body.no-scroll {
     overflow: hidden;
+
 }
 
 .container {
@@ -83,6 +101,8 @@ header .container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Para responsive */
+    position: relative;
+    padding-right: 60px; /* espacio para el botón de tema */
 }
 
 .logo {
@@ -562,6 +582,7 @@ footer p {
 @media (max-width: 768px) {
     header .container {
         flex-wrap: nowrap; /* Evita que el logo y el botón de hamburguesa se envuelvan */
+        padding-right: 60px; /* mantener espacio para el botón de tema */
     }
 
     .main-nav {
