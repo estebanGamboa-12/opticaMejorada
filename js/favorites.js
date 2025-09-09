@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Cargar todos los productos una vez para poder encontrar los detalles de los favoritos
     try {
-        const response = await fetch('https://opticaalberche.netlify.app/');
+        const response = await fetch('https://opticaalberche.netlify.app/data/products.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
