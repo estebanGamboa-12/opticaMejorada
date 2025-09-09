@@ -31,17 +31,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
         favoriteIds.forEach(favId => {
-            const product = allProductsData.find(p => p.id === favId);
+            const product = allProductsData.find(p => String(p.id) === favId);
             if (product) {
                 const productCard = document.createElement('div');
                 productCard.className = 'product-card';
-                productCard.dataset.id = product.id; // Guarda el ID del producto
+                const idStr = String(product.id);
+                productCard.dataset.id = idStr; // Guarda el ID del producto
 
                 productCard.innerHTML = `
                     <img src="${product.mainImage}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p class="price">${product.price.toFixed(2)} €</p>
-                    <button class="favorite-button" data-id="${product.id}">
+                    <button class="favorite-button" data-id="${idStr}">
                         <i class="fas fa-star"></i> Quitar de favoritos
                     </button>
                 `;

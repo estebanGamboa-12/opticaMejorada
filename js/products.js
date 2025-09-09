@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.warn('Fetch falló, intentando import dinámico...', error);
             try {
+
                 const module = await import('http://localhost/opticaMejorada/data/products.json', { assert: { type: 'json' } });
+
                 allProductsData = module.default;
             } catch (importError) {
                 console.error('Error al cargar los productos:', importError);
