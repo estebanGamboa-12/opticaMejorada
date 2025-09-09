@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.warn('Fetch falló, intentando import dinámico...', error);
             try {
 
+
                 const module = await import('https://opticaalberche.netlify.app/data/products.json', { assert: { type: 'json' } });
+
 
 
                 allProductsData = module.default;
