@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 productCard.dataset.id = product.id; // Guarda el ID del producto
 
                 productCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}">
+                    <img src="${product.mainImage}" alt="${product.name}">
                     <h3>${product.name}</h3>
                     <p class="price">${product.price.toFixed(2)} €</p>
                     <button class="favorite-button" data-id="${product.id}">
-<i class="fas fa-star"></i> Quitar de favoritos
+                        <i class="fas fa-star"></i> Quitar de favoritos
                     </button>
                 `;
                 favoritesContainer.appendChild(productCard);
@@ -52,10 +52,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Asigna eventos a los botones de favoritos para quitar de la lista
         document.querySelectorAll('.favorite-button').forEach(button => {
             button.addEventListener('click', (event) => {
-                const itemId = event.target.dataset.id;
+                const btn = event.currentTarget;
+                const itemId = btn.dataset.id;
                 toggleFavorite(itemId); // Quita de favoritos (función de main.js)
                 // Elimina visualmente la tarjeta del producto de la lista
-                event.target.closest('.product-card').remove();
+                btn.closest('.product-card').remove();
                 // Si no quedan favoritos, actualiza el mensaje
                 if (getFavorites().length === 0) {
                     favoritesContainer.innerHTML = '<p class="no-results">Todavía no has añadido ningún producto a tus favoritos. ¡Explora nuestro <a href="productos.html">catálogo</a>!</p>';
