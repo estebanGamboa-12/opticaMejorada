@@ -8,26 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Carga los productos desde el archivo JSON
     async function loadProducts() {
         try {
-            const response = await fetch('https://opticaalberche.netlify.app/data/products.json');
+            const response = await fetch('data/products.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             allProductsData = await response.json();
         } catch (error) {
-            console.warn('Fetch falló, intentando import dinámico...', error);
-            try {
-
-
-                const module = await import('https://opticaalberche.netlify.app/data/products.json', { assert: { type: 'json' } });
-
-
-
-                allProductsData = module.default;
-            } catch (importError) {
-                console.error('Error al cargar los productos:', importError);
-                productListContainer.innerHTML = '<p class="error-message">Lo sentimos, no pudimos cargar los productos en este momento. Por favor, inténtalo de nuevo más tarde.</p>';
-                return;
-            }
+            console.error('Error al cargar los productos:', error);
+            productListContainer.innerHTML = '<p class="error-message">Lo sentimos, no pudimos cargar los productos en este momento. Por favor, inténtalo de nuevo más tarde.</p>';
+            return;
         }
         displayProducts(allProductsData); // Muestra todos los productos por defecto
     }
