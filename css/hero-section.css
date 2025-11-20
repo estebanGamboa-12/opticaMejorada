@@ -1,123 +1,111 @@
-/* css/hero-section.css */
-
 .hero-section {
     position: relative;
-    width: 100%;
-    height: 600px; /* Ajusta la altura según tus necesidades */
-    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white); /* Asumiendo que var(--white) es un color claro */
-    overflow: hidden; /* Para asegurar que la imagen de fondo no desborde */
+    padding: 110px 0 90px;
+    overflow: hidden;
 }
 
-.hero-section::before {
+.hero-section::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente para mejorar la legibilidad del texto */
-    z-index: 1;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(31, 122, 90, 0.14), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(31, 122, 90, 0.08), transparent 32%),
+                radial-gradient(circle at 50% 80%, rgba(15, 23, 42, 0.05), transparent 40%);
+    z-index: 0;
+    pointer-events: none;
 }
 
-.hero-content {
+.hero-grid {
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima de la capa oscura */
-    padding: 20px;
-    max-width: 800px;
-    animation: fadeIn 1.2s ease-out both;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    align-items: center;
 }
 
 .hero-content h1 {
-    font-size: 4rem; /* Gran tamaño para el título principal */
-    margin-bottom: 20px;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
-    line-height: 1.2;
+    font-size: clamp(32px, 5vw, 44px);
+    margin: 10px 0 12px;
+    color: var(--secondary-color);
 }
 
 .hero-content p {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    opacity: 0.9;
-    line-height: 1.5;
+    color: var(--muted-color);
+    max-width: 560px;
 }
 
-.hero-content .button {
-    background-color: var(--accent-color); /* Usa tu color de acento definido en style.css */
-    color: var(--dark-bg); /* Texto oscuro para el botón de acento */
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    transition: background-color var(--transition-speed), transform 0.2s ease, box-shadow var(--transition-speed);
-    border-radius: var(--border-radius);
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 16px 0 10px;
+}
+
+.hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    color: var(--muted-color);
+    font-size: 14px;
+}
+
+.hero-highlights .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
     display: inline-block;
-    text-decoration: none; /* Asegúrate de que no tenga subrayado si es un <a> */
+    margin-right: 10px;
 }
 
-.hero-content .button:hover {
-    background-color: #e0a800; /* Un tono un poco más oscuro de tu accent-color */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    color: var(--muted-color);
 }
 
-/* Media Queries para Responsive */
-@media (max-width: 992px) {
+.hero-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.hero-card ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    padding-left: 0;
+    margin-top: 12px;
+}
+
+.hero-card li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-card i {
+    color: var(--primary-color);
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #e8f3ed;
+    color: var(--primary-dark);
+    border-radius: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 700px) {
     .hero-section {
-        height: 500px;
-    }
-    .hero-content h1 {
-        font-size: 3.5rem;
-    }
-    .hero-content p {
-        font-size: 1.4rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-section {
-        height: 400px;
-    }
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-    .hero-content .button {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        height: 350px;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-    .hero-content .button {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+        padding: 90px 0 70px;
     }
 }

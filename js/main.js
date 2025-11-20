@@ -78,8 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body; // Para evitar scroll al abrir el menú
     const themeToggle = document.getElementById('theme-toggle');
 
+    // Tema claro por defecto; si existe un botón de tema respeta la preferencia guardada
     const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'dark' || !storedTheme) {
+    if (themeToggle && storedTheme === 'dark') {
         body.classList.add('dark-mode');
     }
 
