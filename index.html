@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Óptica Alberche El Tiemblo - Tu Visión, Nuestra Prioridad</title>
-    <meta name="description"
-        content="Bienvenido a Óptica Alberche El Tiemblo. Descubre nuestro catálogo de gafas de sol, graduadas y lentillas. Marca tus favoritos y visítanos en El Tiemblo.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Óptica Alberche El Tiemblo - Cuidado Visual Minimalista</title>
+    <meta name="description" content="Descubre colecciones curadas de gafas y lentillas con un diseño limpio y asesoría profesional en Óptica Alberche El Tiemblo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hero-section.css">
 </head>
@@ -17,7 +15,7 @@
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="logo" aria-label="Volver al inicio">
                 <img src="img/logo.jpg" alt="Logo Óptica Alberche El Tiemblo">
             </a>
             <button class="hamburger-menu" aria-label="Abrir menú de navegación">
@@ -25,9 +23,9 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Navegación principal">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="favoritos.html">Mis Favoritos</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -37,56 +35,98 @@
     </header>
 
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>Tu Visión, Nuestra Prioridad</h1>
-            <p>Descubre nuestra amplia colección de gafas graduadas, de sol y lentillas.</p>
-            <a href="productos.html" class="button">Ver Productos</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Óptica Alberche · El Tiemblo</p>
+                <h1>Minimalismo que realza tu visión</h1>
+                <p>Seleccionamos gafas y lentillas con líneas limpias, materiales confortables y asesoría cercana para que tu estilo se sienta ligero.</p>
+                <div class="hero-actions">
+                    <a href="productos.html" class="button">Ver catálogo</a>
+                    <a href="contacto.html" class="link-button">Reserva una visita</a>
+                </div>
+                <div class="hero-highlights">
+                    <div>
+                        <span class="dot"></span>
+                        Ajustes personalizados en tienda
+                    </div>
+                    <div>
+                        <span class="dot"></span>
+                        Colecciones de sol y graduadas
+                    </div>
+                    <div>
+                        <span class="dot"></span>
+                        Exámenes visuales profesionales
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="badge">
+                    <i class="fas fa-eye"></i>
+                    Visión serena
+                </div>
+                <h3>Atención centrada en ti</h3>
+                <p>Exploramos tus hábitos visuales y te guiamos hacia la montura o lentilla perfecta con un enfoque sereno y minimalista.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Recomendaciones claras</li>
+                    <li><i class="fas fa-check"></i> Materiales livianos</li>
+                    <li><i class="fas fa-check"></i> Protección UV certificada</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section class="info-section">
         <div class="container">
-            <h2>Nuestros Servicios</h2>
+            <div class="section-header">
+                <p class="eyebrow">Servicios esenciales</p>
+                <h2>Todo lo necesario para ver bien</h2>
+                <p class="section-lead">Un catálogo curado y servicios profesionales para que cuidar tu visión sea simple.</p>
+            </div>
             <div class="info-grid">
                 <div class="info-card">
-                    <i class="fas fa-glasses fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
-                    <h3>Gafas Graduadas</h3>
-                    <p>Amplia selección de monturas modernas y clásicas para todas las necesidades visuales.</p>
+                    <div class="icon-circle"><i class="fas fa-glasses"></i></div>
+                    <h3>Gafas graduadas</h3>
+                    <p>Monturas ligeras con líneas limpias y lentes adaptadas a tus rutinas diarias.</p>
                 </div>
                 <div class="info-card">
-                    <i class="fas fa-sun fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
-                    <h3>Gafas de Sol</h3>
-                    <p>Protección y estilo para tus ojos con las últimas tendencias en gafas de sol.</p>
+                    <div class="icon-circle"><i class="fas fa-sun"></i></div>
+                    <h3>Gafas de sol</h3>
+                    <p>Protección UV y diseños esenciales que combinan con cualquier look.</p>
                 </div>
                 <div class="info-card">
-                    <i class="fas fa-eye fa-3x" style="color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <div class="icon-circle"><i class="fas fa-eye"></i></div>
                     <h3>Lentillas</h3>
-                    <p>Soluciones cómodas y seguras para el cuidado de tus ojos, adaptadas a ti.</p>
+                    <p>Comodidad diaria con opciones para uso continuo o puntual.</p>
                 </div>
-                <div class="info-card"> <i class="fas fa-diagnoses fa-3x"
-                        style="color: var(--primary-color); margin-bottom: 15px;"></i>
-                    <h3>Exámenes Visuales</h3>
-                    <p>Realizamos revisiones completas para garantizar la salud y agudeza de tu visión.</p>
+                <div class="info-card">
+                    <div class="icon-circle"><i class="fas fa-diagnoses"></i></div>
+                    <h3>Exámenes visuales</h3>
+                    <p>Revisiones completas con tecnología precisa y seguimiento cercano.</p>
                 </div>
             </div>
-            <p class="pickup-message">
-                <strong>Importante:</strong> Consulta nuestro catálogo online y visítanos en tienda. ¡No realizamos
-                envíos!
-            </p>
+            <p class="pickup-message"><strong>Importante:</strong> Consulta el catálogo online y recoge tus productos en tienda. No realizamos envíos.</p>
         </div>
     </section>
 
     <section class="about-us-section">
-        <div class="container">
-            <h2>Sobre Nosotros</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>En Óptica Alberche El Tiemblo, llevamos más de X años cuidando la visión de nuestros clientes con profesionalidad y cercanía. Nos esforzamos por ofrecer las últimas novedades en tecnología óptica y las monturas más actuales, siempre adaptándonos a tus necesidades y estilo.</p>
-                    <p>Nuestro equipo de ópticos-optometristas altamente cualificados te brindará un servicio personalizado, asegurando que encuentres la solución visual perfecta para ti y tu familia.</p>
-                    <a href="contacto.html" class="button button-secondary">Conócenos Más</a>
+        <div class="container about-grid">
+            <div class="about-text">
+                <p class="eyebrow">Ópticos-optometristas</p>
+                <h2>Más de X años cuidando cada detalle</h2>
+                <p>Somos un equipo cercano y perfeccionista. Combinamos experiencia clínica con una selección minimalista de monturas para que cada visita sea clara, cálida y sin prisas.</p>
+                <p>Trabajamos con las últimas tecnologías en lentes y ofrecemos ajustes personalizados para que sientas comodidad desde el primer día.</p>
+                <div class="about-actions">
+                    <a href="contacto.html" class="button">Conócenos más</a>
+                    <a href="productos.html" class="link-button">Ver productos destacados</a>
                 </div>
-                <div class="about-image">
-                    <img src="img/image_a064b4.jpg" alt="Fachada de Óptica Alberche El Tiemblo" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <div class="about-image">
+                <div class="photo-frame">
+                    <img src="img/exterior.png" alt="Fachada de Óptica Alberche El Tiemblo">
+                </div>
+                <div class="quote-card">
+                    <p>“Elegimos piezas que se sienten ligeras y honestas. Que tu visión se lleve la atención.”</p>
+                    <span>- Equipo Óptica Alberche</span>
                 </div>
             </div>
         </div>
@@ -94,37 +134,45 @@
 
     <section class="testimonials-section">
         <div class="container">
-            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <div class="section-header">
+                <p class="eyebrow">Experiencias reales</p>
+                <h2>Clientes que ven la diferencia</h2>
+            </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p>"Excelente atención y gran variedad de gafas. Encontré justo lo que buscaba y el servicio fue impecable. ¡Totalmente recomendados!"</p>
-                    <p class="author">- María G.</p>
+                    <p>“Excelente atención y variedad. Encontré unas gafas sutiles que encajan con todo. Repetiré seguro.”</p>
+                    <p class="author">María G.</p>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Siempre confío en Óptica Alberche para mis revisiones. Son muy profesionales y me aconsejan perfectamente sobre lentillas."</p>
-                    <p class="author">- Javier S.</p>
+                    <p>“Las revisiones son detalladas y siempre explican cada opción con claridad. Me siento acompañado.”</p>
+                    <p class="author">Javier S.</p>
                 </div>
                 <div class="testimonial-card">
-                    <p>"Me ayudaron a elegir unas gafas de sol preciosas y con una protección UV fantástica. ¡Muy contenta con mi compra!"</p>
-                    <p class="author">- Laura P.</p>
+                    <p>“Me ayudaron a elegir unas gafas de sol preciosas y muy ligeras. Protección y estilo sin exceso.”</p>
+                    <p class="author">Laura P.</p>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
     <section class="cta-section">
-        <div class="container">
-            <h2>¿Listo para Cuidar tu Visión?</h2>
-            <p>Visítanos en nuestra tienda en El Tiemblo o contacta con nosotros para cualquier consulta.</p>
-            <a href="contacto.html" class="button button-primary">Contáctanos Ahora</a>
-            <a href="productos.html" class="button button-secondary">Explorar Productos</a>
+        <div class="container cta-card">
+            <div>
+                <p class="eyebrow">Agenda tu visita</p>
+                <h2>Estamos listos para cuidar tu visión</h2>
+                <p>Visítanos en El Tiemblo o escríbenos para resolver cualquier duda. Te acompañamos con transparencia y estilo minimalista.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="contacto.html" class="button">Contactar ahora</a>
+                <a href="productos.html" class="link-button">Explorar catálogo</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container footer-content">
             <p>&copy; 2025 Óptica Alberche El Tiemblo. Todos los derechos reservados.</p>
-            <p>Diseño y Desarrollo por Esteban Gamboa</p>
+            <p>Diseño y desarrollo por Esteban Gamboa</p>
         </div>
     </footer>
 
